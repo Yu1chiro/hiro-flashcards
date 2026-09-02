@@ -285,5 +285,6 @@ app.get("/history", (req, res) => res.sendFile(path.join(__dirname, "public", "h
 app.get("/quiz", (req, res) => res.sendFile(path.join(__dirname, "public", "quiz.html")));
 app.get("/login", (req, res) => res.sendFile(path.join(__dirname, "public", "login.html")));
 app.get("/admin", requireAuthView, (req, res) => res.sendFile(path.join(__dirname, "public", "admin.html")));
+app.get("/import", requireAuthView, (req, res) => res.sendFile(path.join(__dirname, "public", "import.html")));
 
 app.listen(PORT, () => console.log(`🚀 Server jalan di port ${PORT}`));
